@@ -1,0 +1,33 @@
+1. Buka Visual Studio Code dan buka folder proyek yang berisi kode Java Anda.
+2. Buka terminal di Visual Studio Code dengan cara klik menu `View -> Terminal`.
+3. Di terminal, pastikan Anda berada di direktori proyek yang sesuai menggunakan perintah `cd`. Misalnya, jika proyek Anda disimpan di direktori `/home/user/myproject`, gunakan perintah berikut di terminal:
+   ```bash
+   cd /home/user/myproject
+   ```
+4. Inisialisasi repository Git dengan menjalankan perintah berikut di terminal:
+   ```bash
+   git init
+   ```
+5. Tambahkan semua file ke repository Git dengan perintah:
+   ```bash
+   git add .
+   ```
+6. Buat commit dengan pesan yang menjelaskan perubahan yang Anda buat, misalnya:
+   ```bash
+   git commit -m "Initial commit"
+   ```
+7. Buat repositori baru di GitHub (pastikan Anda sudah memiliki akun GitHub) dengan mengikuti langkah-langkah di [https://github.com/new](https://github.com/new). Berikan nama repositori, deskripsi, dan pilih opsi yang sesuai.
+8. Setelah repositori dibuat, GitHub akan memberikan URL repositori yang baru dibuat. Salin URL tersebut.
+9. Tambahkan remote repository ke proyek lokal dengan menjalankan perintah:
+   ```bash
+   git remote add origin <URL_REPOSITORY>
+   ```
+   Gantilah `<URL_REPOSITORY>` dengan URL yang Anda salin pada langkah sebelumnya.
+10. Unggah kode ke repositori GitHub dengan perintah:
+    ```bash
+    git push -u origin master
+    ```
+    Anda akan diminta untuk memasukkan username dan password GitHub.
+11. Tunggu sampai proses pengunggahan selesai. Setelah selesai, kode Java Anda akan terunggah ke repositori GitHub.
+
+Selamat, Anda telah berhasil mengupload kode Java Anda ke GitHub menggunakan Visual Studio Code!

@@ -29,3 +29,41 @@ public class HelloWorld {
 Pastikan Anda telah menginstal JDK dan konfigurasi JDK yang benar agar perintah `javac` dan `java` dapat dijalankan di terminal.
 
 
+
+# Pendataan Mahasiswa
+
+Program ini merupakan contoh implementasi pendataan mahasiswa menggunakan bahasa pemrograman Java. Program ini memungkinkan pengguna untuk memasukkan data mahasiswa seperti NIM, nama, program studi, dan tahun ajaran, dan kemudian menampilkan data mahasiswa yang telah dimasukkan.
+
+## Cara Menjalankan Program
+
+1. Pastikan Anda memiliki Java Development Kit (JDK) terinstal di komputer Anda.
+2. Unduh atau salin kode program Java yang terdapat dalam file `pendataan.java`.
+3. Buka terminal atau command prompt, dan arahkan ke direktori tempat Anda menyimpan file Java.
+4. Compile program Java dengan menjalankan perintah berikut:
+
+   ```bash
+   javac pendataan.java
+   ```
+
+5. Setelah berhasil dikompilasi, jalankan program dengan perintah berikut:
+
+   ```bash
+   java pendataan
+   ```
+
+6. Program akan meminta Anda untuk memasukkan data mahasiswa dalam format `nim#nama#prodi#tahun_ajaran`. Masukkan data dengan format yang valid, atau ketikkan 'selesai' untuk mengakhiri input data.
+7. Setelah selesai memasukkan data, program akan menampilkan data mahasiswa yang telah dimasukkan dalam format tabel.
+
+## Contoh Penggunaan
+
+```
+Masukkan data mahasiswa (Format: nim#nama#prodi#tahun_ajaran), atau ketik 'selesai' untuk mengakhiri:
+12345#John Doe#Teknik Informatika#2023/2024
+54321#Jane Smith#Manajemen#2022/2023
+selesai
+
+Data Mahasiswa:
+NIM   | Nama        | Prodi               | Tahun Ajaran
+12345 | John Doe    | Teknik Informatika  | 2023/2024
+54321 | Jane Smith  | Manajemen           | 2022/2023
+```
