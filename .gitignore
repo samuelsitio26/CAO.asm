@@ -1,0 +1,23 @@
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Build output
+/bin/
+/target/
+
+# Dependency directories
+/lib/
+/node_modules/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
