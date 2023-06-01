@@ -1,9 +1,7 @@
-name: Classroom Workflow
+name: Upload to GitHub
+
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -12,33 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up JDK 11
+      - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: 11
-          distribution: 'adopt'
-
-      - name: Configure Git Identity
-        run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          java-version: '11'
 
       - name: Build and Test
         run: |
           javac HelloWorld.java
           javac pendataan.java
 
-      - name: Check Git Status
-        run: git status
-
-      - name: Add Changes to Git
-        run: git add .
-
-      - name: Check for Changes
-        run: git diff-index --quiet HEAD || git commit -m "Add Java files"
-
-      - name: Push Changes to GitHub
-        run: git push
+      - name: Commit and Push
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Your Name
+          author_email: your.email@example.com
+          message: Auto-commit changes
+          push: true
