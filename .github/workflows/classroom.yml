@@ -21,6 +21,11 @@ jobs:
           java-version: 11
           distribution: 'adopt'
 
+      - name: Configure Git Identity
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+
       - name: Build and Test
         run: |
           javac HelloWorld.java
