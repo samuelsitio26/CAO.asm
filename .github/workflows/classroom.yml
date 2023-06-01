@@ -1,4 +1,4 @@
-name: Upload Java Files
+name: Classroom Workflow
 
 on:
   push:
@@ -10,32 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up JDK 11
+      - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           java-version: 11
 
-      - name: Build and Test HelloWorld
+      - name: Build HelloWorld
+        run: javac HelloWorld.java
+
+      - name: Build pendataan
+        run: javac pendataan.java
+
+      - name: Commit and Push Changes
         run: |
-          javac HelloWorld.java
-          java HelloWorld
-
-      - name: Build and Test pendataan
-        run: |
-          javac pendataan.java
-          java pendataan
-
-      - name: Upload HelloWorld.java
-        uses: actions/upload-artifact@v2
-        with:
-          name: HelloWorld
-          path: HelloWorld.java
-
-      - name: Upload pendataan.java
-        uses: actions/upload-artifact@v2
-        with:
-          name: pendataan
-          path: pendataan.java
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add HelloWorld.class pendataan.class
+          git commit -m "Compile Java classes"
+          git push
