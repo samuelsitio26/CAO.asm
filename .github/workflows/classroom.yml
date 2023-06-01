@@ -1,7 +1,9 @@
 name: Classroom Workflow
-
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -13,21 +15,20 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up JDK
+      - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
           java-version: 11
 
-      - name: Build HelloWorld
-        run: javac HelloWorld.java
-
-      - name: Build pendataan
-        run: javac pendataan.java
+      - name: Build and Test
+        run: |
+          javac HelloWorld.java
+          javac pendataan.java
 
       - name: Commit and Push Changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add HelloWorld.class pendataan.class
-          git commit -m "Compile Java classes"
+          git config --global user.name "Your Name"
+          git config --global user.email "youremail@example.com"
+          git add .
+          git commit -m "Add Java files"
           git push
