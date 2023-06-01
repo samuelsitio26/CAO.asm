@@ -1,23 +1,16 @@
-# Compiled class files
+# Ignore compiled Java bytecode
 *.class
 
-# Package files
-*.jar
-*.war
-*.ear
+# Ignore compiled Python bytecode
+*.pyc
 
-# IDE-specific files
-.idea/
+# Ignore IDE-specific files
 .vscode/
+.idea/
 
-# Build output
-/bin/
+# Ignore build output
+/out/
+
+# Ignore dependency directories
 /target/
-
-# Dependency directories
-/lib/
 /node_modules/
-
-# Miscellaneous
-.DS_Store
-Thumbs.db
