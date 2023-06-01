@@ -31,8 +31,14 @@ jobs:
           javac HelloWorld.java
           javac pendataan.java
 
-      - name: Commit and Push Changes
-        run: |
-          git add .
-          git commit -m "Add Java files"
-          git push
+      - name: Check Git Status
+        run: git status
+
+      - name: Add Changes to Git
+        run: git add .
+
+      - name: Commit Changes
+        run: git commit -m "Add Java files"
+
+      - name: Push Changes to GitHub
+        run: git push
